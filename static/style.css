@@ -1,0 +1,21 @@
+body {
+    display: grid;
+    grid-template-rows: auto,auto, auto, auto;
+    grid-template-columns: auto;
+}
+
+.home-heading{
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    font-family: Playwrite;
+    font-size: 60px;
+}
+
+.card text-center mb-3{
+    align-items: center;
+}
+
+@font-face {
+    font-family: Playwrite;
+    src: url(https://fonts.googleapis.com/css2?family=Playwrite+AU+SA&display=swa);
+}
