@@ -1,21 +1,22 @@
 body {
+    height: 100vh;
+    margin: 0;
     display: grid;
-    grid-template-rows: auto,auto, auto, auto;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
 }
 
-.home-heading{
-    margin: 10px 10px 10px 10px;
+.quote-card{
     text-align: center;
-    font-family: Playwrite;
-    font-size: 60px;
+    grid-columns: 0;
+    grid-rows: 0;
+    justify-self: center;
+    align-self: center;
 }
 
-.card text-center mb-3{
-    align-items: center;
-}
-
-@font-face {
-    font-family: Playwrite;
-    src: url(https://fonts.googleapis.com/css2?family=Playwrite+AU+SA&display=swa);
+.take-note-button{
+    grid-columns: 0;
+    grid-rows: 1;
+    justify-self: center;
+    align-self: flex-start;
 }
