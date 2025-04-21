@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add a Note</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/css/uikit.min.css" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/css/uikit.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
 </head>
-<body>
-<form action="/add" method="POST">
-    <div class="form-group">
-        <label for="title">Note Title</label>
-        <input type="text" placeholder="Title..." id="title" name="title" class="form-control-lg"/>
+<body class="uk-background-cover save-note-page" style="background-image: url(static/images/notes_background.jpg);">
+<form action="/add" method="POST" class="uk-form-stacked save-note-form">
+    <div>
+        <label for="title" class="uk-form-label uk-text-large" style="font-family: Lora;font-weight: bold;">Note
+            Title</label>
+        <input type="text" placeholder="Title..." id="title" name="title" class="uk-input uk-form-width-large"
+               required/>
     </div>
-    <div class="form-group">
-        <label for="content">Note Content</label>
-        <textarea id="content" placeholder="Content..." name="content" class="form-control"></textarea>
+    <div>
+        <label for="content" class="uk-form-label uk-text-large" style="font-family: Lora;font-weight: bold;">Note
+            Content</label>
+        <textarea id="content" placeholder="Content..." name="content"
+                  class="uk-textarea uk-form-width-large" style="height: 300px;width: 500px;resize: none;"
+                  required></textarea>
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit" class="uk-button-large uk-button-secondary" style="font-family: Lora;">Submit</button>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit-icons.min.js"></script>

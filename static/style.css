@@ -1,9 +1,11 @@
-body {
+.home-page {
     height: 100vh;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
 }
 
 .quote-card{
@@ -16,7 +18,49 @@ body {
 
 .take-note-button{
     grid-columns: 0;
-    grid-rows: 1;
+    grid-rows: 0;
+    align-self: center;
     justify-self: center;
-    align-self: flex-start;
+}
+
+.your-notes-button{
+    grid-columns: 0;
+    grid-rows: 0;
+    align-self: center;
+    justify-self: center;
+}
+
+.save-note-page{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.your-notes-page{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.note {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-note-form{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    background-color: white;
+    height: 100vh;
+}
+
+.home-buttons{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }

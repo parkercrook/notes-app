@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/css/uikit.min.css"/>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
 </head>
-<body class="uk-background-cover" style="background-image: url(static/images/notes_background.jpg);">
+<body class="uk-background-cover home-page" style="background-image: url(static/images/notes_background.jpg);">
 <div class="uk-card uk-card-default uk-card-hover quote-card uk-card-large">
     <div class="uk-card-body">
         <h2 class="uk-card-title" style="font-size: 30px;font-family: Lora;">“The discipline of writing something down
@@ -15,8 +15,15 @@
             Iacocca</p>
     </div>
 </div>
-<a type="button" href="/add" class="uk-button uk-button-default uk-button-large uk-margin-medium-bottom take-note-button" style="background-color: white;font-family: Lora;font-weight: bold;">Take
-    a Note</a>
+<div class="home-buttons">
+    <button type="button" onclick="location.href= '{{ url_for('add_note') }}'"
+       class="uk-button uk-button-default uk-button-large uk-margin-medium-bottom uk-width-1-6 take-note-button"
+       style="background-color: white;font-family: Lora;font-weight: bold;">Take
+        a Note</button>
+    <button type="button" onclick="location.href= '{{ url_for('my_notes') }}'"
+       class="uk-button uk-button-default uk-button-large uk-width-1-6 your-notes-button"
+       style="background-color: white;font-family: Lora;font-weight: bold;">Your Notes</button>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit-icons.min.js"></script>
 </body>

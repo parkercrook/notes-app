@@ -5,7 +5,7 @@ notes = []
 
 @app.route("/")
 def home():
-    return render_template("home.html", notes=notes)
+    return render_template("home.html")
 
 @app.route("/add", methods=['GET', 'POST'])
 def add_note():
@@ -19,6 +19,10 @@ def add_note():
         note["content"] = note_content
         notes.append(note)
         return redirect(url_for("home"))
+
+@app.route("/my-notes", methods=['GET'])
+def my_notes():
+    return render_template("my_notes.html", notes=notes)
 
 if __name__ == "__main__":
     app.run(debug=True)

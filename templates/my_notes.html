@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/css/uikit.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+</head>
+<body class="uk-background-cover your-notes-page" style="background-image: url(static/images/notes_background.jpg);">
+<div class="your-notes">
+    {% for note in notes %}
+    <div class="uk-card-header" style="background-color: white;">
+        <div class="uk-grid-small uk-flex-middle">
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="40" height="40" src="images/note_icon.png" alt="Note">
+            </div>
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{note.title}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body">
+        <p>{{note.content}}</p>
+    </div>
+    <div class="uk-card-footer">
+        <a href="#" class="uk-button uk-button-text">Edit</a>
+    </div>
+    {% endfor %}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>
