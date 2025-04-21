@@ -1,3 +1,14 @@
+html, body{
+  padding: 0;
+  margin: 0;
+}
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+}
+
 .home-page {
     height: 100vh;
     margin: 0;
@@ -16,14 +27,14 @@
     align-self: center;
 }
 
-.take-note-button{
+.your-notes-button{
     grid-columns: 0;
     grid-rows: 0;
     align-self: center;
     justify-self: center;
 }
 
-.your-notes-button{
+.take-note-button{
     grid-columns: 0;
     grid-rows: 0;
     align-self: center;
@@ -39,15 +50,23 @@
 
 .your-notes-page{
     display: grid;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    grid-template-rows: auto
+    grid-template-columns: auto;
+    background-image: url(/static/images/notes_background.jpg);
+    background-repeat: repeat;
 }
 
+.go-home-btn {
+    grid-rows: 0;
+    grid-columns: 0;
+    align-self: center;
+    justify-self: center;
+    margin: 20px 10px 5px 10px;
+}
+
+
 .note {
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    margin: 20px 20px 20px 20px;
 }
 
 .save-note-form{

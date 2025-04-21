@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/css/uikit.min.css"/>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
 </head>
@@ -22,9 +22,10 @@
         a Note</button>
     <button type="button" onclick="location.href= '{{ url_for('my_notes') }}'"
        class="uk-button uk-button-default uk-button-large uk-width-1-6 your-notes-button"
-       style="background-color: white;font-family: Lora;font-weight: bold;">Your Notes</button>
+       style="background-color: white;font-family: Lora;font-weight: bold;" id="your-notes-btn" data-notes='{{ notes|tojson }}'>Your Notes</button>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit-icons.min.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
